@@ -16,7 +16,7 @@ public class DFS {
 	    private LinkedList<Integer> adj[]; 
 	  
 	    // Constructor 
-	    DFS(int v) 
+	   public DFS(int v) 
 	    { 
 	        V = v; 
 	        adj = new LinkedList[v]; 
