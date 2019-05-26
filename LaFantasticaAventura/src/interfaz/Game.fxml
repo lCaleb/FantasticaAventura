@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.GameController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="interfaz.GameController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="516.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Sin%20título-3.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="playerName" layoutX="14.0" layoutY="250.0" opacity="0.74" prefHeight="33.0" prefWidth="227.0" promptText="Nombre/Usuario" />
+      <Text fill="WHITE" layoutX="116.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="playButton" layoutX="61.0" layoutY="309.0" mnemonicParsing="false" onAction="#playButton" opacity="0.82" prefHeight="33.0" prefWidth="133.0" text="Jugar" />
+      <Button fx:id="scoreButton" layoutX="61.0" layoutY="357.0" mnemonicParsing="false" onAction="#scoreButton" opacity="0.82" prefHeight="33.0" prefWidth="133.0" text="Puntajes" />
+   </children>
 </AnchorPane>
