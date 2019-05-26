@@ -125,16 +125,7 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 	}
 		return found;
 }
-	//
-	// public Edge<V, E> searchEdge(String key) {
-	// return edges.get(key);
-	// }
-
-	// public Edge<V, E> removeEdge(String key) {
-	//
-	// return edges.remove(key);
-
-	// }
+	
 	@Override
 	public void inicializeMatrix() {
 		for (int i = 0; i < adjacentsMatrix.length; i++) {
@@ -569,125 +560,125 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 	}
 	
 
-	public static void main(String[] args) {
-		// Graph<String, Double> grafo= new Graph<String, Double>();
-		// String S ="S";
-		// String C="C";
-		// String N="N";
-		// String D="D";
-		// String A="A";
-		//
-		// Double edge1=12.0;
-		// Double edge2=9.0;
-		// Double edge3=13.0;
-		// Double edge4=14.0;
-		// Double edge5=7.0;
-		// Double edge6=10.0;
-		// Double edge7=8.0;
-		//
-		// grafo.addVertex("S", S);
-		// grafo.addVertex("C", C);
-		// grafo.addVertex("N", N);
-		// grafo.addVertex("D", D);
-		// grafo.addVertex("A", A);
-		//
-		// grafo.insertEdge(edge1, "0", "S", "C", edge1);
-		// grafo.insertEdge(edge2, "1", "S", "D", edge2);
-		// grafo.insertEdge(edge3, "2", "D", "C", edge3);
-		// grafo.insertEdge(edge4, "3", "D", "A", edge4);
-		// grafo.insertEdge(edge5, "4", "A", "C", edge5);
-		// grafo.insertEdge(edge6, "5", "C", "N", edge6);
-		// grafo.insertEdge(edge7, "6", "N", "A", edge7);
-		//
-		//
-		// int[] lista=grafo.primMTS();
-		//
-		// for (int i = 0; i < lista.length; i++) {
-		//
-		// System.out.println(i+ " VERTICE SIGUIENTE " + lista[i]);
-		//
-		// }
-
-//		 Graph<Building, Double> grafo = new Graph<Building, Double>();
-//		 Building A = new Building("A");
-//		 Building B = new Building("B");
-//		 Building C = new Building("C");
-//		 Building D = new Building("D");
-//		 Building E = new Building("E");
-//		 Building Z = new Building("Z");
+//	public static void main(String[] args) {
+//		// Graph<String, Double> grafo= new Graph<String, Double>();
+//		// String S ="S";
+//		// String C="C";
+//		// String N="N";
+//		// String D="D";
+//		// String A="A";
+//		//
+//		// Double edge1=12.0;
+//		// Double edge2=9.0;
+//		// Double edge3=13.0;
+//		// Double edge4=14.0;
+//		// Double edge5=7.0;
+//		// Double edge6=10.0;
+//		// Double edge7=8.0;
+//		//
+//		// grafo.addVertex("S", S);
+//		// grafo.addVertex("C", C);
+//		// grafo.addVertex("N", N);
+//		// grafo.addVertex("D", D);
+//		// grafo.addVertex("A", A);
+//		//
+//		// grafo.insertEdge(edge1, "0", "S", "C", edge1);
+//		// grafo.insertEdge(edge2, "1", "S", "D", edge2);
+//		// grafo.insertEdge(edge3, "2", "D", "C", edge3);
+//		// grafo.insertEdge(edge4, "3", "D", "A", edge4);
+//		// grafo.insertEdge(edge5, "4", "A", "C", edge5);
+//		// grafo.insertEdge(edge6, "5", "C", "N", edge6);
+//		// grafo.insertEdge(edge7, "6", "N", "A", edge7);
+//		//
+//		//
+//		// int[] lista=grafo.primMTS();
+//		//
+//		// for (int i = 0; i < lista.length; i++) {
+//		//
+//		// System.out.println(i+ " VERTICE SIGUIENTE " + lista[i]);
+//		//
+//		// }
+//
+////		 Graph<Building, Double> grafo = new Graph<Building, Double>();
+////		 Building A = new Building("A");
+////		 Building B = new Building("B");
+////		 Building C = new Building("C");
+////		 Building D = new Building("D");
+////		 Building E = new Building("E");
+////		 Building Z = new Building("Z");
+////		
+////		
+////		
+////		 grafo.addVertex("C",C);
+////		 grafo.addVertex("B",B);
+////		 grafo.addVertex("D",D);
+////		 grafo.addVertex("E",E);
+////		 grafo.addVertex("Z",Z);
+////		 grafo.addVertex("A",A);
+////		 Double edge1 = 4.0;
+////		 Double edge2 = 2.0;
+////		 Double edge3 = 1.0;
+////		 Double edge4 = 5.0;
+////		 Double edge5 = 8.0;
+////		 Double edge6 = 10.0;
+////		 Double edge7 = 2.0;
+////		 Double edge8 = 6.0;
+////		 Double edge9 = 3.0;
+////		 grafo.insertEdge(edge7,  "E","D", edge7);
+////		 grafo.insertEdge(edge3,  "C","B", edge3);
+////		 grafo.insertEdge(edge9,  "E","Z", edge9);
+////		 grafo.insertEdge(edge1, "A","B", edge1);
+////		 grafo.insertEdge(edge2, "A","C", edge2);
+////		
+////		 grafo.insertEdge(edge4, "B","D", edge4);
+////		 grafo.insertEdge(edge5,  "C","D", edge5);
+////		 grafo.insertEdge(edge6,  "C","E", edge6);
+////		 
+////		 grafo.insertEdge(edge8,  "D","Z", edge8);
+////		
 //		
-//		
-//		
-//		 grafo.addVertex("C",C);
-//		 grafo.addVertex("B",B);
-//		 grafo.addVertex("D",D);
-//		 grafo.addVertex("E",E);
-//		 grafo.addVertex("Z",Z);
-//		 grafo.addVertex("A",A);
-//		 Double edge1 = 4.0;
-//		 Double edge2 = 2.0;
-//		 Double edge3 = 1.0;
-//		 Double edge4 = 5.0;
-//		 Double edge5 = 8.0;
-//		 Double edge6 = 10.0;
-//		 Double edge7 = 2.0;
-//		 Double edge8 = 6.0;
-//		 Double edge9 = 3.0;
-//		 grafo.insertEdge(edge7,  "E","D", edge7);
-//		 grafo.insertEdge(edge3,  "C","B", edge3);
-//		 grafo.insertEdge(edge9,  "E","Z", edge9);
-//		 grafo.insertEdge(edge1, "A","B", edge1);
-//		 grafo.insertEdge(edge2, "A","C", edge2);
-//		
-//		 grafo.insertEdge(edge4, "B","D", edge4);
-//		 grafo.insertEdge(edge5,  "C","D", edge5);
-//		 grafo.insertEdge(edge6,  "C","E", edge6);
 //		 
-//		 grafo.insertEdge(edge8,  "D","Z", edge8);
+//		// for(int i=0;i<grafo.getWeightMatrix().length;i++) {
+//		// for(int j=0;j<grafo.getWeightMatrix().length;j++) {
+//		// System.out.println(grafo.getWeightMatrix()[i][j]);
+//		// }
+//		// }
+//		//
 //		
-		
-		 
-		// for(int i=0;i<grafo.getWeightMatrix().length;i++) {
-		// for(int j=0;j<grafo.getWeightMatrix().length;j++) {
-		// System.out.println(grafo.getWeightMatrix()[i][j]);
-		// }
-		// }
-		//
-		
-		// for(int i=0;i<grafo.getVertices().get(2).getAdjList().size();i++){
-		//
-		// System.out.println(grafo.getVertices().get(2).getAdjList().get(i).getValue().getName());
-		// }
-//		 for(int i=0;i<grafo.dijkstraNodes("A").size();i++) {
-//			 System.out.println("nodo "+i);
-//			 for(int j=0;j<grafo.dijkstraNodes("A").get(i).size();j++) {
-//			     
-//				 System.out.println(grafo.dijkstraNodes("A").get(i).get(j));
-//			 }
+//		// for(int i=0;i<grafo.getVertices().get(2).getAdjList().size();i++){
+//		//
+//		// System.out.println(grafo.getVertices().get(2).getAdjList().get(i).getValue().getName());
+//		// }
+////		 for(int i=0;i<grafo.dijkstraNodes("A").size();i++) {
+////			 System.out.println("nodo "+i);
+////			 for(int j=0;j<grafo.dijkstraNodes("A").get(i).size();j++) {
+////			     
+////				 System.out.println(grafo.dijkstraNodes("A").get(i).get(j));
+////			 }
+////		 
+////		 }
+////		 grafo.print(grafo.dijkstraNodes("Z"),grafo.foundPos("A"));
+////		 for(int i=0;i<grafo.getNodes().size();i++) {
+////			 System.out.println(grafo.getNodes().get(i).getName());
+////		 }
+////		 System.out.println("DISTANCIAS");
+////		 for(int i=0;i<grafo.dijkstra("A").length;i++) {
+////			 System.out.println(grafo.dijkstra("A")[i]);
+////		 }
+//		
+//
+////		 for (Map.Entry<String, NodeGraph<Building>> entry : grafo.getVertices().entrySet()) {
+////				System.out.println(entry.getValue().getPos());
+////				System.out.println(entry.getKey());
+////		 }
 //		 
-//		 }
-//		 grafo.print(grafo.dijkstraNodes("Z"),grafo.foundPos("A"));
-//		 for(int i=0;i<grafo.getNodes().size();i++) {
-//			 System.out.println(grafo.getNodes().get(i).getName());
-//		 }
-//		 System.out.println("DISTANCIAS");
-//		 for(int i=0;i<grafo.dijkstra("A").length;i++) {
-//			 System.out.println(grafo.dijkstra("A")[i]);
-//		 }
-		
-
-//		 for (Map.Entry<String, NodeGraph<Building>> entry : grafo.getVertices().entrySet()) {
-//				System.out.println(entry.getValue().getPos());
-//				System.out.println(entry.getKey());
-//		 }
-		 
-		 
-		//
-		
-		
-		
-	}
-	//
-	
+//		 
+//		//
+//		
+//		
+//		
+//	}
+//	//
+//	
 
 }
