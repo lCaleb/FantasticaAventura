@@ -10,6 +10,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+import Graph1.Edge;
+import Graph1.Graph;
 import model.Player;
 
 public class StartGame {
@@ -21,8 +23,12 @@ public class StartGame {
 	private Character character;
 
 	private Sonidos sound;
-
+	
+	private Graph<String,PointM> graph;
+	
 	public PointM[] points;
+	
+	public String[] routes;
 
 	// private
 
@@ -31,6 +37,8 @@ public class StartGame {
 		queue = new PriorityQueue<Player>();
 		balls = new ArrayList<Ball>();
 		points = new PointM[30];
+		routes= new String[30];
+		graph= new Graph<String,PointM>();
 		// recuperar();
 		// new PriorityQueue<Player>();
 		pointsCreator();
@@ -62,11 +70,13 @@ public class StartGame {
 		for (int i = 0; i < points.length; i++) {
 			int x = (int) ((Math.random() * 2500) + 1);
 			int y = (int) ((Math.random() * 1650) + 1);
-
 			PointM punto = new PointM(x, y);
-			points[i] = punto;
-
+			points[i] = punto;		
+			}
 		}
+		
+	
+		
 		// points[0]= new Point(400, 200);
 		// points[1]= new Point(520, 700);
 		// points[2]= new Point(440, 1100);
@@ -78,7 +88,7 @@ public class StartGame {
 		// points[8]= new Point(1000, 200);
 		// points[9]= new Point(1500, 700);
 
-	}
+	
 
 	public void characterCreator(String name) {
 		character = new Character(name);
