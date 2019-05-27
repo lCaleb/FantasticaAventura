@@ -3,9 +3,11 @@ package interfaz;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.stage.Stage;
 import model.StartGame;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
@@ -14,7 +16,9 @@ public class Main extends Application {
 	private static Stage primaryStage;
 	private static GameController gameController;
 	private static SelectionController select;
+	private static SpaceController space;
 	private static Scene selection;
+	private static Scene spaceScene;
 	private static StartGame start;
 	@Override
 	public void start(Stage primaryStage) {
@@ -44,6 +48,22 @@ public class Main extends Application {
 		primaryStage.show();
 	}
 	
+	public void getSpace() throws IOException {
+		FXMLLoader loader= new FXMLLoader(getClass().getResource("Space.fxml"));
+		AnchorPane root=  (AnchorPane) loader.load();
+		space= loader.getController();
+
+		spaceScene= new Scene(root);
+		space.link(this,start, spaceScene);
+		primaryStage.setScene(spaceScene);
+		primaryStage.show();
+		
+//		spaceScene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+//			public void handle(KeyEvent event) {
+//				
+//			}
+//		});
+	}
 	public static void main(String[] args) {
 		launch(args);
 	}

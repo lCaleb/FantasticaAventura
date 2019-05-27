@@ -29,7 +29,8 @@ public class GameController {
     @FXML
     void playButton(ActionEvent event) throws IOException {
     	player=playerName.getText();
-    	main.getSelection();
+    	//main.getSelection();
+    	main.getSpace();
     }
 
     @FXML
