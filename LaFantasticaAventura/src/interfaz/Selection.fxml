@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.SelectionController">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="499.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.SelectionController">
+   <children>
+      <ImageView fitHeight="598.0" fitWidth="804.0" layoutX="-11.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/595000.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="387.0" layoutX="229.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/dragon_ball_z__dbz__nuevo_logo_by_saodvd_d8rx6aw-fullview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="selecccionadoImage" fitHeight="150.0" fitWidth="200.0" layoutX="302.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="gokuImage" fitHeight="117.0" fitWidth="130.0" layoutX="124.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cara1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="trunksImage" fitHeight="128.0" fitWidth="141.0" layoutX="331.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cara2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="goldenImage" fitHeight="128.0" fitWidth="168.0" layoutX="523.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cara3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="continuarImage" fitHeight="150.0" fitWidth="200.0" layoutX="578.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/continuar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="regresarImage" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

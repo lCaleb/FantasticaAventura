@@ -45,6 +45,7 @@ public class Main extends Application {
 		select.link(this,start);
 		selection= new Scene(root);
 		primaryStage.setScene(selection);
+		primaryStage.centerOnScreen();
 		primaryStage.show();
 	}
 	
@@ -56,6 +57,7 @@ public class Main extends Application {
 		spaceScene= new Scene(root);
 		space.link(this,start, spaceScene);
 		primaryStage.setScene(spaceScene);
+		primaryStage.centerOnScreen(); 	
 		primaryStage.show();
 		
 //		spaceScene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
@@ -64,6 +66,16 @@ public class Main extends Application {
 //			}
 //		});
 	}
+	
+	
+	public static Stage getPrimaryStage() {
+		return primaryStage;
+	}
+
+	public static void setPrimaryStage(Stage primaryStage) {
+		Main.primaryStage = primaryStage;
+	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -1,14 +1,79 @@
 package interfaz;
 
+import java.io.IOException;
+
+import javafx.fxml.FXML;import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import model.StartGame;
 
 public class SelectionController {
+		
+    @FXML
+    private ImageView selecccionadoImage;
 
-		private Main main;
-		private StartGame start;
+    @FXML
+    private ImageView gokuImage;
+
+    @FXML
+    private ImageView trunksImage;
+
+    @FXML
+    private ImageView goldenImage;
+    
+    @FXML
+    private ImageView continuarImage;
+
+    @FXML
+    private ImageView regresarImage;
+	
+    private Main main;
+	
+    private StartGame start;
+    
+    private String seleccionado;
+    
+    
+    
+    public void seleccionar() {
+    	
+    	gokuImage.setOnMouseClicked(e->{
+    		Image img= new Image("/images/source.gif");
+    		selecccionadoImage.setImage(img);
+    		gokuImage.setOpacity(1);
+    		goldenImage.setOpacity(0.3);
+    		trunksImage.setOpacity(0.3);
+    	});
+    	goldenImage.setOnMouseClicked(e->{
+    		Image img= new Image("/images/12.gif");
+    		selecccionadoImage.setImage(img);
+    		gokuImage.setOpacity(0.3);
+    		goldenImage.setOpacity(1);
+    		trunksImage.setOpacity(0.3);
+    	});
+    		trunksImage.setOnMouseClicked(e->{
+    		Image img= new Image("/images/tenor.gif");
+        	selecccionadoImage.setImage(img);
+    		gokuImage.setOpacity(0.3);
+    		goldenImage.setOpacity(0.3);
+    		trunksImage.setOpacity(1);
+    	});
+    		continuarImage.setOnMouseClicked(e->{
+        		
+            	try {
+					main.getSpace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+        	});
+    		regresarImage.setOnMouseClicked(e->{
+            	main.start(main.getPrimaryStage());
+        	});
+    }
 		
 		public void link(Main main,StartGame start) {
 			this.main= main;
 			this.start=start;
+			seleccionar();
 		}
 }
