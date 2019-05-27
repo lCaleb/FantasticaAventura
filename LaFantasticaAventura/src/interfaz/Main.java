@@ -21,8 +21,9 @@ public class Main extends Application {
 	private static Scene spaceScene;
 	private static StartGame start;
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws IOException {
 			this.primaryStage=primaryStage;
+			start= new StartGame();
 		try {
 			FXMLLoader loader= new FXMLLoader(getClass().getResource("Game.fxml"));
 			AnchorPane root = (AnchorPane) loader.load();

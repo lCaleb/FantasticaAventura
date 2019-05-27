@@ -13,6 +13,8 @@ public class Sonidos {
 	public static final int ESFERAI=4;
 	public static final int CLICK=5;
 	public static final int STOP=3;
+	public static final int AUDIO=6;
+	
 	
 	
 private AudioClip poder;
@@ -53,6 +55,8 @@ private AudioClip click;
 			vuelo.stop();
 			poder.stop();
 		}else if(tipo==9) {
+			audio.loop(); 
+		}else if(tipo==AUDIO) {
 			audio.loop(); 
 		}
 	}

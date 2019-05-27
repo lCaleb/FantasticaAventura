@@ -41,6 +41,7 @@ public class SelectionController {
 		gokuImage.setOnMouseClicked(e -> {
 			sound.sonido(Sonidos.CLICK);
 			Image img = new Image("/images/source.gif");
+			seleccionado= "goku";
 			selecccionadoImage.setImage(img);
 			gokuImage.setOpacity(1);
 			goldenImage.setOpacity(0.3);
@@ -49,6 +50,7 @@ public class SelectionController {
 		goldenImage.setOnMouseClicked(e -> {
 			sound.sonido(Sonidos.CLICK);
 			Image img = new Image("/images/12.gif");
+			seleccionado= "frieza";
 			selecccionadoImage.setImage(img);
 			gokuImage.setOpacity(0.3);
 			goldenImage.setOpacity(1);
@@ -57,6 +59,7 @@ public class SelectionController {
 		trunksImage.setOnMouseClicked(e -> {
 			sound.sonido(Sonidos.CLICK);
 			Image img = new Image("/images/tenor.gif");
+			seleccionado= "trunks";
 			selecccionadoImage.setImage(img);
 			gokuImage.setOpacity(0.3);
 			goldenImage.setOpacity(0.3);
@@ -64,6 +67,8 @@ public class SelectionController {
 		});
 		continuarImage.setOnMouseClicked(e -> {
 			sound.sonido(Sonidos.CLICK);
+			start.characterCreator(seleccionado);
+			start.getSound().sonido(Sonidos.AUDIO);
 			try {
 				main.getSpace();
 			} catch (IOException e1) {
@@ -73,7 +78,12 @@ public class SelectionController {
 		});
 		regresarImage.setOnMouseClicked(e -> {
 			sound.sonido(Sonidos.CLICK);
-			main.start(main.getPrimaryStage());
+			try {
+				main.start(main.getPrimaryStage());
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		});
 	}
 

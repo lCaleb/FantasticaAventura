@@ -4,12 +4,21 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="interfaz.SpaceController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.SpaceController">
    <children>
-      <ImageView fx:id="space" fitHeight="1800.0" fitWidth="2700.0" layoutX="-450.0" layoutY="-349.0" onKeyPressed="#key" pickOnBounds="true" smooth="false">
+      <ImageView fx:id="space" fitHeight="1800.0" fitWidth="2700.0" layoutX="-480.0" layoutY="-449.0" onKeyPressed="#key" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../images/space1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="character" fitHeight="97.0" fitWidth="81.0" layoutX="359.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Character/goku/0.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="730.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../esferas/8.png" />
          </image>
       </ImageView>
    </children>

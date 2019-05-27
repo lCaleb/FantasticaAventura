@@ -5,6 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import model.StartGame;
 
 public class GameController {
@@ -22,7 +25,12 @@ public class GameController {
     
     private Main main;
     
+    public ImageView prueba;
+    
     private StartGame start;
+    
+    @FXML
+    private AnchorPane anchor;
     
     
 
@@ -42,6 +50,12 @@ public class GameController {
     	this.main=main;
     	this.start=start;
     	player="";
+    	
+    	prueba= new ImageView(new Image("/Character/frieza/0.png"));
+
+    	prueba.setLayoutX(0);
+    	prueba.setLayoutY(0);
+    	anchor.getChildren().add(prueba);
     }
 
 }
