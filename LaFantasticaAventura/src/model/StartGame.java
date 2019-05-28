@@ -42,7 +42,7 @@ public class StartGame {
 		// recuperar();
 		// new PriorityQueue<Player>();
 		pointsCreator();
-		addDragonBalls();
+	//	addDragonBalls();
 	}
 
 	public void catchBall(Ball ball) {
