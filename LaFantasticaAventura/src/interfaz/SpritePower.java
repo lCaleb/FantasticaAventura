@@ -52,9 +52,16 @@ public class SpritePower extends ImageView{
 		}), new KeyFrame(Duration.millis(40)));
 
 		hilo.setCycleCount(Animation.INDEFINITE);
+		
+	}
+	
+	public void run(int side) {
 		hilo.play();
 	}
 	
+	public void stop(){
+		
+	}
 	
 	
 	
