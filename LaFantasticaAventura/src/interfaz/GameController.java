@@ -51,11 +51,13 @@ public class GameController {
     	this.start=start;
     	player="";
     	
-    	prueba= new ImageView(new Image("/Character/frieza/0.png"));
-
-    	prueba.setLayoutX(0);
-    	prueba.setLayoutY(0);
-    	anchor.getChildren().add(prueba);
+//    	prueba= new ImageView(new Image("/Character/frieza/0.png"));
+//
+//    	prueba.setLayoutX(0);
+//    	prueba.setLayoutY(0);
+    	SpritePower prueba= new SpritePower();
+    	prueba.runPower();
+     	anchor.getChildren().add(prueba);
     }
 
 }

@@ -111,7 +111,7 @@ public class SpaceController {
 					start.getCharacter().right=true;
 					if (space.getLayoutX()>LIMITE_DERECHO) {
 					double posx=space.getLayoutX();
-					space.setLayoutX(posx-5);
+					space.setLayoutX(posx-10);
 					reloadMonticulos();
 					}
 					
@@ -119,7 +119,7 @@ public class SpaceController {
 					start.getCharacter().left=true;
 					if (space.getLayoutX()<LIMITE_IZQUIERDO) {
 					double posx=space.getLayoutX();
-					space.setLayoutX(posx+5);
+					space.setLayoutX(posx+10);
 					reloadMonticulos();
 					}
 					
@@ -127,7 +127,7 @@ public class SpaceController {
 					start.getCharacter().up=true;
 					if (space.getLayoutY()<LIMITE_ARRIBA) {
 					double posY=space.getLayoutY();
-					space.setLayoutY(posY+5);
+					space.setLayoutY(posY+10);
 					reloadMonticulos();
 					}
 					
@@ -135,7 +135,7 @@ public class SpaceController {
 					start.getCharacter().down=true;
 					if (space.getLayoutY()>LIMITE_ABAJO) {
 					double posY=space.getLayoutY();
-					space.setLayoutY(posY-5);
+					space.setLayoutY(posY-10);
 					reloadMonticulos();
 					}
 					
