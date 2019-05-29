@@ -7,8 +7,6 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 public class SpriteMonticulo extends ImageView {
 
-	public int posX;
-	public int posY;
 	public Timeline hilo;
 	
 	public int shakerInt= 3;
@@ -27,10 +25,10 @@ public class SpriteMonticulo extends ImageView {
 
 	public void shake() {
 		hilo = new Timeline(new KeyFrame(Duration.ZERO, e -> {
-			setLayoutX(posX+shakerInt);
-			setLayoutY(posY+shakerInt);
+			setLayoutX(getLayoutX()+shakerInt);
+			setLayoutY(getLayoutY()+shakerInt);
 			shakerInt=shakerInt*-1;
-		}), new KeyFrame(Duration.millis(2)));
+		}), new KeyFrame(Duration.millis(20)));
 
 		hilo.setCycleCount(Animation.INDEFINITE);
 		hilo.play();

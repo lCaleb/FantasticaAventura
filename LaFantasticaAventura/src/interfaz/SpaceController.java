@@ -153,11 +153,10 @@ public class SpaceController {
 					start.getCharacter().powerLeft=true;
 					power.setLayoutX(start.getCharacter().x-70);
 					power.setLayoutY(start.getCharacter().y);
-					if (start.heapNear(power.getLayoutX(), power.getLayoutY())==-1) {
-						
-					} else {
-
-					}
+					int pos= start.heapNear(power.getLayoutX(), power.getLayoutY(),space.getLayoutX(),space.getLayoutY());
+					if (pos>=0) {
+						monticulos[pos].shake();
+					} 
 					power.run(SpritePower.LEFT);
 					
 				}

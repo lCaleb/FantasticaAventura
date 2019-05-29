@@ -65,13 +65,14 @@ public class StartGame {
 		}
 	}
 
-	public int heapNear(double x, double y){
+	public int heapNear(double x, double y, double a, double b){
 		int coincide=-1;
 		for(int i=0; i<points.length;i++){
-			if(x>points[i].getX()+100||x+70<points[i].getX()||y>points[i].getY()+130||y+50<points[i].getY()){
+			if(x>points[i].getX()+a+100||x+70<points[i].getX()+a||y>points[i].getY()+b+130||y+50<points[i].getY()+b){
 				System.out.println("no colision");
 			}
 			else {
+				System.out.println("Colision");
 				coincide=i;
 			}
 		}
@@ -89,18 +90,7 @@ public class StartGame {
 			}
 		}
 		
-	public int heapNear(double x, double y,PointM[] point) {
-		int cercano=0;
-		for (int i = 0; i < point.length; i++) {
-			double mx= point[i].getX();
-			double my=point[i].getY();
-			if(mx) {
-				
-			}
-		}
-		
-		return 0;
-	}
+
 		
 		// points[0]= new Point(400, 200);
 		// points[1]= new Point(520, 700);
