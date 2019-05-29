@@ -22,6 +22,7 @@ public class Main extends Application {
 	private static Scene spaceScene;
 	private static Scene resultScene;
 	private static StartGame start;
+	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 			this.primaryStage=primaryStage;
