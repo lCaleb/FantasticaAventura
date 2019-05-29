@@ -149,7 +149,7 @@ class GraphTest {
 
 		/**
 		 * way1, way2, way3 son caminos desde el vertice 3 hasta el vertice 1 verificar
-		 * si dijkstra encontró el camino mimnimo entre las todas las aristas
+		 * si dijkstra encontrï¿½ el camino mimnimo entre las todas las aristas
 		 * 
 		 */
 		double way1 = graph.getEdges().get(6).getWeight() + graph.getEdges().get(5).getWeight();

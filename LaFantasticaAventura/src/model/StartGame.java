@@ -47,7 +47,7 @@ public class StartGame {
 		pointsCreator();
 		addDragonBalls();
 		addEdgesBalls();
-	//	shortWay();
+		//shortWay();
 	}
 
 	public void catchBall(Ball ball) {
@@ -59,8 +59,7 @@ public class StartGame {
 		
 		pointsPrim= new PointM[vertices.length];
 		for (int i = 0; i < vertices.length; i++) {
-		
-			pointsPrim[i]=graph.getVertices().get(vertices[i]).getValue().point;
+			//pointsPrim[i]=graph.getVertices().get(vertices[i]).getValue().point;
 		}
 	}
 	

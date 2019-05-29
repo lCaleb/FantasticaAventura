@@ -9,7 +9,7 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final int SIZE = 10001; // maximo numero de vértices
+	public static final int SIZE = 10001; // maximo numero de vï¿½rtices
 	public static final double INFINITY = 1 << 30;
 	public static final int AMOUNT = 100;
 	public static final int AMOUNT1 = 22;
@@ -82,10 +82,11 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 	public void addVertex(String key, V newVertex) {
 		if (vertices.isEmpty()) { // Si la tabla esta vacia que la posicion en la matriz sea (0,0)
 			NodeGraph<V> vertex = new NodeGraph<V>(newVertex, 0);
+			
 			vertices.put(key, vertex);
 		} else {
 			NodeGraph<V> vertex = new NodeGraph<V>(newVertex, vertices.size()); // si esta con al menos
-																				// 1 que sea el
+																	// 1 que sea el
 																				// (size,size)
 			vertices.put(key, vertex);
 		}
@@ -361,7 +362,7 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 	public int[] primMTS() {
 
 		NodeGraph<V> node = minEdge().getOrigin();
-//		System.out.println(node.getValue() + "PRIM");
+
 		int key = node.getPos();
 
 		double dist[] = new double[vertices.size()];
@@ -394,10 +395,17 @@ public class Graph<V, E> implements IGraph<V,E>, Serializable {
 			}
 
 		}
-
 		return order;
-
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public void makeSet(int parent[], int n) {
 		for (int i = 0; i < n; i++) {

@@ -162,8 +162,8 @@ public class SpaceController {
 						monticulos[pos].shake();
 						if (monticulos[pos].id>0) {
 							ImageView img= new ImageView(new Image("/esferas/"+monticulos[pos].id+".png"));
-							img.setLayoutX(730);
-							img.setLayoutY(450);
+							img.setLayoutX(700);
+							img.setLayoutY(422);
 							anchorPane.getChildren().add(img);
 						} 
 					} 
@@ -178,8 +178,8 @@ public class SpaceController {
 						monticulos[pos].shake();
 						if (monticulos[pos].id>0) {
 							ImageView img= new ImageView(new Image("/esferas/"+monticulos[pos].id+".png"));
-							img.setLayoutX(730);
-							img.setLayoutY(450);
+							img.setLayoutX(700);
+							img.setLayoutY(422);
 							anchorPane.getChildren().add(img);
 						} 
 					} 
