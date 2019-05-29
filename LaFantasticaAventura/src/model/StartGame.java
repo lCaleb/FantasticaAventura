@@ -24,9 +24,11 @@ public class StartGame {
 
 	private Sonidos sound;
 	
-	private Graph<String,PointM> graph;
+	private Graph<Ball,Integer> graph;
 	
 	public PointM[] points;
+	
+	public PointM[] pointsPrim;
 	
 	public String[] routes;
 
@@ -38,33 +40,62 @@ public class StartGame {
 		balls = new ArrayList<Ball>();
 		points = new PointM[30];
 		routes= new String[30];
-		graph= new Graph<String,PointM>();
+		graph= new Graph<Ball,Integer>();
 		// recuperar();
 		// new PriorityQueue<Player>();
 		pointsCreator();
-	//	addDragonBalls();
+		addDragonBalls();
+		addEdgesBalls();
 	}
 
 	public void catchBall(Ball ball) {
 		ball.catched=true;
+	}
+	
+	public void shortWay() {
+		int[] vertices= graph.primMTS();
+	
+		for (int i = 0; i < vertices.length; i++) {
+			pointsPrim[i]=graph.getNodes().get(vertices[i]).point;
+		}
+	}
+	
+	public void addEdgesBalls() {
+		
+		int count=9;
+		while(count>0) {
+			for (int i = 0; i < 9; i++) {
+				int a = (int) (Math.random() * 7) + 1;
+				int b = (int) (Math.random() * 7) + 1;
+				if(a!=b) {
+					double weigth =(Math.random() * 100) + 50;
+					graph.insertEdge(count, a+"", b+"", weigth);
+				}
+			
+			}
+		}
 	}
 
 	public void addDragonBalls() {
 		int count = 7;
 
 		while (count > 0) {
-			Ball ball = new Ball(count);
-			balls.add(ball);
+			
+			//balls.add(ball);
+			
 			int randi = (int) (Math.random() * 29) + 1;
 			if (!points[randi].haveBall) {
+				Ball ball = new Ball(count,points[randi]);
 				points[randi].setBall(ball);
 				points[randi].haveBall = true;
+				graph.addVertex(count+"", ball);
 				count--;
 			}
 
 		}
 	}
 
+	
 	public int heapNear(double x, double y, double a, double b){
 		int coincide=-1;
 		for(int i=0; i<points.length;i++){

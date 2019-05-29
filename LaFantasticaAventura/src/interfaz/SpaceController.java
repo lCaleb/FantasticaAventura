@@ -57,6 +57,8 @@ public class SpaceController {
 	private Stage primary;
 	@FXML
 	private Scene spaceScene;
+	@FXML
+	private ImageView esferas;
 	
 	private SpritePower power;
 	
@@ -81,7 +83,13 @@ public class SpaceController {
 			double posY=space.getLayoutY();	
 			int random= (int) (Math.random()*3)+1;
 			SpriteMonticulo img= new SpriteMonticulo(new Image("/Character/monticulo/"+random+".png"));
-			monticulos[i]= img;
+			if (start.points[i].ball!=null) {
+				img.id=start.points[i].ball.starsQuanty;
+
+			} else {
+				img.id=0;
+			}
+						monticulos[i]= img;
 			monticulos[i].setFitHeight(130);
 			monticulos[i].setFitWidth(100);
 			monticulos[i].setLayoutX(posX+start.points[i].getX());
@@ -147,6 +155,10 @@ public class SpaceController {
 					start.getCharacter().powerRight=true;
 					power.setLayoutX(start.getCharacter().x+75);
 					power.setLayoutY(start.getCharacter().y);
+					int pos= start.heapNear(power.getLayoutX(), power.getLayoutY(),space.getLayoutX(),space.getLayoutY());
+					if (pos>=0) {
+						monticulos[pos].shake();
+					} 
 					power.run(SpritePower.RIGHT);
 					
 				}else if (e.getCode()==KeyCode.Z) {
@@ -156,6 +168,12 @@ public class SpaceController {
 					int pos= start.heapNear(power.getLayoutX(), power.getLayoutY(),space.getLayoutX(),space.getLayoutY());
 					if (pos>=0) {
 						monticulos[pos].shake();
+						if (monticulos[pos].id>0) {
+							ImageView img= new ImageView(new Image("/esferas/"+monticulos[pos].id+".png"));
+							img.setLayoutX(730);
+							img.setLayoutY(450);
+							anchorPane.getChildren().add(img);
+						} 
 					} 
 					power.run(SpritePower.LEFT);
 					
