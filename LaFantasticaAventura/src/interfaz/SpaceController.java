@@ -62,6 +62,8 @@ public class SpaceController {
 	
 	private SpritePower power;
 	
+	private ImageView radar;
+	
 	public static final int SPEED = 3;
 	
 	public Timeline hilo;
@@ -158,6 +160,12 @@ public class SpaceController {
 					int pos= start.heapNear(power.getLayoutX(), power.getLayoutY(),space.getLayoutX(),space.getLayoutY());
 					if (pos>=0) {
 						monticulos[pos].shake();
+						if (monticulos[pos].id>0) {
+							ImageView img= new ImageView(new Image("/esferas/"+monticulos[pos].id+".png"));
+							img.setLayoutX(730);
+							img.setLayoutY(450);
+							anchorPane.getChildren().add(img);
+						} 
 					} 
 					power.run(SpritePower.RIGHT);
 					
@@ -252,6 +260,13 @@ public class SpaceController {
 		power = new SpritePower();
 		power.setVisible(true);
 		anchorPane.getChildren().add(power);
+		
+		radar = new ImageView();
+		radar.setImage(new Image("/images/radar.png"));
+		radar.setFitWidth(45);
+		radar.setFitHeight(45);
+		radar.setVisible(false);
+		anchorPane.getChildren().add(radar);
 	
 		
 	}

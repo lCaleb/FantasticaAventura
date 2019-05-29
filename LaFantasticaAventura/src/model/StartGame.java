@@ -41,11 +41,13 @@ public class StartGame {
 		points = new PointM[30];
 		routes= new String[30];
 		graph= new Graph<Ball,Integer>();
+
 		// recuperar();
 		// new PriorityQueue<Player>();
 		pointsCreator();
 		addDragonBalls();
 		addEdgesBalls();
+	//	shortWay();
 	}
 
 	public void catchBall(Ball ball) {
@@ -54,9 +56,11 @@ public class StartGame {
 	
 	public void shortWay() {
 		int[] vertices= graph.primMTS();
-	
+		
+		pointsPrim= new PointM[vertices.length];
 		for (int i = 0; i < vertices.length; i++) {
-			pointsPrim[i]=graph.getNodes().get(vertices[i]).point;
+		
+			pointsPrim[i]=graph.getVertices().get(vertices[i]).getValue().point;
 		}
 	}
 	
@@ -70,6 +74,7 @@ public class StartGame {
 				if(a!=b) {
 					double weigth =(Math.random() * 100) + 50;
 					graph.insertEdge(count, a+"", b+"", weigth);
+					count--;
 				}
 			
 			}
