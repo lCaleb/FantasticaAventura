@@ -76,6 +76,7 @@ public class StartGame {
 			}
 		}
 		return coincide;
+		
 	}
 	
 	public void pointsCreator() {
