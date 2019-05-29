@@ -17,8 +17,10 @@ public class Main extends Application {
 	private static GameController gameController;
 	private static SelectionController select;
 	private static SpaceController space;
+	private static ResultadosController resultados;
 	private static Scene selection;
 	private static Scene spaceScene;
+	private static Scene resultScene;
 	private static StartGame start;
 	@Override
 	public void start(Stage primaryStage) throws IOException {
@@ -66,6 +68,17 @@ public class Main extends Application {
 //				
 //			}
 //		});
+	}
+	
+	public void getResultados() throws IOException {
+		FXMLLoader loader= new FXMLLoader(getClass().getResource("Results.fxml"));
+		AnchorPane root=  (AnchorPane) loader.load();
+		resultados= loader.getController();
+		resultados.link(this,start);
+		resultScene= new Scene(root);
+		primaryStage.setScene(resultScene);
+		primaryStage.centerOnScreen();
+		primaryStage.show();
 	}
 	
 	

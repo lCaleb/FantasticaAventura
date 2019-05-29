@@ -42,7 +42,7 @@ public class StartGame {
 		// recuperar();
 		// new PriorityQueue<Player>();
 		pointsCreator();
-	addDragonBalls();
+	//	addDragonBalls();
 	}
 
 	public void catchBall(Ball ball) {
@@ -88,7 +88,18 @@ public class StartGame {
 			}
 		}
 		
-	
+	public int heapNear(double x, double y,PointM[] point) {
+		int cercano=0;
+		for (int i = 0; i < point.length; i++) {
+			double mx= point[i].getX();
+			double my=point[i].getY();
+			if(mx) {
+				
+			}
+		}
+		
+		return 0;
+	}
 		
 		// points[0]= new Point(400, 200);
 		// points[1]= new Point(520, 700);
