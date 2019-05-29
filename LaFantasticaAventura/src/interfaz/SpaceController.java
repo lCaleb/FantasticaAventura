@@ -3,6 +3,8 @@ package interfaz;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
+
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -33,7 +35,7 @@ public class SpaceController {
 	////////////////////////////////Monticulos///////////////////
 	
 
-	    private ImageView[] monticulos;
+	    private SpriteMonticulo[] monticulos;
 	
 
 	///////////////////////////////////////////////////////////
@@ -56,6 +58,8 @@ public class SpaceController {
 	@FXML
 	private Scene spaceScene;
 	
+	private SpritePower power;
+	
 	public static final int SPEED = 3;
 	
 	public Timeline hilo;
@@ -76,7 +80,7 @@ public class SpaceController {
 			double posX=space.getLayoutX();
 			double posY=space.getLayoutY();	
 			int random= (int) (Math.random()*3)+1;
-			ImageView img= new ImageView(new Image("/Character/monticulo/"+random+".png"));
+			SpriteMonticulo img= new SpriteMonticulo(new Image("/Character/monticulo/"+random+".png"));
 			monticulos[i]= img;
 			monticulos[i].setFitHeight(130);
 			monticulos[i].setFitWidth(100);
@@ -139,6 +143,23 @@ public class SpaceController {
 					reloadMonticulos();
 					}
 					
+				}else if (e.getCode()==KeyCode.X) {
+					start.getCharacter().powerRight=true;
+					power.setLayoutX(start.getCharacter().x+75);
+					power.setLayoutY(start.getCharacter().y);
+					power.run(SpritePower.RIGHT);
+					
+				}else if (e.getCode()==KeyCode.Z) {
+					start.getCharacter().powerLeft=true;
+					power.setLayoutX(start.getCharacter().x-70);
+					power.setLayoutY(start.getCharacter().y);
+					if (start.heapNear(power.getLayoutX(), power.getLayoutY())==-1) {
+						
+					} else {
+
+					}
+					power.run(SpritePower.LEFT);
+					
 				}
 				
 				
@@ -166,6 +187,14 @@ public class SpaceController {
 				}else if (e.getCode()==KeyCode.DOWN) {
 					start.getCharacter().down=false;
 				
+				}else if (e.getCode()==KeyCode.X) {
+					power.stop();
+					start.getCharacter().powerRight=false;
+					
+				}else if (e.getCode()==KeyCode.Z) {
+					power.stop();
+					start.getCharacter().powerLeft=false;
+					
 				}
 			}
 			
@@ -199,11 +228,13 @@ public class SpaceController {
 		this.main = main;
 		this.start = start;
 		this.spaceScene= spaceScene;
-		monticulos= new ImageView[30];
+		monticulos= new SpriteMonticulo[30];
 		functions();
 		perpetumMotus();
 		cargarMonticulos();
-		
+		power = new SpritePower();
+		power.setVisible(true);
+		anchorPane.getChildren().add(power);
 	
 		
 	}

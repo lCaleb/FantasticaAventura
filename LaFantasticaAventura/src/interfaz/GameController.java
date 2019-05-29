@@ -25,8 +25,7 @@ public class GameController {
     
     private Main main;
     
-    public ImageView prueba;
-    
+ 
     private StartGame start;
     
     @FXML
@@ -51,13 +50,20 @@ public class GameController {
     	this.start=start;
     	player="";
     	
-//    	prueba= new ImageView(new Image("/Character/frieza/0.png"));
-//
-//    	prueba.setLayoutX(0);
-//    	prueba.setLayoutY(0);
+    	ImageView pruebaA= new ImageView(new Image("/Character/frieza/0.png"));
+
+    	pruebaA.setLayoutX(0);
+    	pruebaA.setLayoutY(0);
     	SpritePower prueba= new SpritePower();
-    	prueba.runPower();
+    	prueba.run(-1);
+    	prueba.setLayoutX(150);
+    	prueba.setLayoutY(0);
+   	
+    	
+    	
+     	anchor.getChildren().add(pruebaA);
      	anchor.getChildren().add(prueba);
+     	
     }
 
 }

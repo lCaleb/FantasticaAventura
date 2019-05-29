@@ -65,6 +65,19 @@ public class StartGame {
 		}
 	}
 
+	public int heapNear(double x, double y){
+		int coincide=-1;
+		for(int i=0; i<points.length;i++){
+			if(x>points[i].getX()+100||x+70<points[i].getX()||y>points[i].getY()+130||y+50<points[i].getY()){
+				System.out.println("no colision");
+			}
+			else {
+				coincide=i;
+			}
+		}
+		return coincide;
+	}
+	
 	public void pointsCreator() {
 
 		for (int i = 0; i < points.length; i++) {

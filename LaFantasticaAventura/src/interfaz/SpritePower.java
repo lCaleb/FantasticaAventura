@@ -23,6 +23,7 @@ public class SpritePower extends ImageView{
 		// TODO Auto-generated constructor stub
 		setFitHeight(50);
 		setFitWidth(80);
+		runPower();
 		run=false;
 	}
 
@@ -49,17 +50,22 @@ public class SpritePower extends ImageView{
 			} else {
 				n++;
 			}
-		}), new KeyFrame(Duration.millis(40)));
+		}), new KeyFrame(Duration.millis(100)));
 
 		hilo.setCycleCount(Animation.INDEFINITE);
 		
 	}
 	
 	public void run(int side) {
+		setVisible(true);
 		hilo.play();
+		setScaleX(side);
+		
 	}
 	
 	public void stop(){
+		hilo.stop();
+		setVisible(false);
 		
 	}
 	

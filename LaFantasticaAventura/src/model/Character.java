@@ -19,7 +19,8 @@ public class Character {
 	public boolean right;
 	public boolean up;
 	public boolean down;
-
+	public boolean powerLeft;
+	public boolean powerRight;
 	public int direction;
 	
 
@@ -72,12 +73,20 @@ public class Character {
 					x = x - 1;
 				}
 			} else {
+				if (powerLeft) {
+					setImage(1+"");
+				}else if(powerRight) {
+					setImage(2+"");
+				}else {
 				setImage(0);
+				}
 			}
 
 	}
 	
-	
+	public void setImage(String direction) {
+		this.url = "/Character/" + name + "/lanzar/"+direction+".png";
+	}
 	
 	public void setImage(int direction) {
 		this.url = "/Character/" + name + "/"+direction+".png";
